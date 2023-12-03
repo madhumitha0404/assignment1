@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <style>
+        body{
+            background-color: lightpink;
+            margin: 0;
+            padding-top: 10px;
+
+        }
+        .navbar {
+        display: flex;
+        font-size: 20px;
+        justify-content: space-between;
+        align-items: center;
+        background-color:lightpink;
+        padding: 15px 20px;
+        border-bottom: 2px solid palevioletred;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000; 
+    }
+    
+    .about {
+    
+    display:flex;
+    
+    }
+    .about a{
+    text-decoration: none;
+    color: black;
+    padding: auto;
+    font-weight: bold;
+    }
+    .about a:hover{
+    background-color: palevioletred;
+    }
+    
+    .nav-links {
+        display: flex;
+    }
+    .nav-links a {
+        color: black;
+        text-decoration: none;
+        padding: 10px 15px;
+        font-weight: bold;
+    }
+    .auth-links {
+    display: flex;
+    margin-right: 20px;
+}
+    .auth-links a {
+        color: black;
+        text-decoration: none;
+        padding: 10px 15px;
+        font-weight: bold;
+    }  
+    .nav-links a:hover, .auth-links a:hover {
+        background-color: palevioletred;
+    }
+    
+    .information{
+        text-align: center;
+    }
+    .information_box{
+        text-align: center;
+        margin: 0;
+    }
+    .information_first{
+    
+        font-size: 20px;
+        font-weight: bold;
+        color:black; /* Set text color */
+        padding: 5px;
+        display: inline-flex;
+        border-radius:10px; ;
+        background-color:lightsteelblue;
+         
+    }
+    
+    .information_about{
+max-width: 100%;
+        font-size: 90px;
+        font-weight: bold;
+        text-align: center; 
+        overflow: auto;
+    }
+    button{
+        font-size: 25px;
+        border-radius: 10px;
+        cursor: pointer;
+        padding:10px 20px 10px 20px;
+    }
+
+    .login_information{
+        text-align: center;
+    }
+    button:active{
+        background-color: black;
+        color:white;
+    }
+    .star-rating {
+        display: inline-block;
+        font-size: 24px;
+        padding-top: 20px;
+        color: red;
+    }
+
+    .star-rating::before {
+            content: "\2605"; 
+    }
+    .image1{
+        padding-top: 100px;
+        padding-bottom: 150px;
+    }
+    .first-img{
+        max-width: 100%;
+    }
+    .feat_box{
+        text-align: center;
+    }
+    .feat_head,.price_head,.faq_head, .blog1{
+        display: inline-block;
+        border-radius: 5px;
+        background-color: aquamarine;
+        padding:10px 10px;
+        color: black;
+        font-size: 20px;
+        font-weight: bold;
+        align-content: center;
+    }
+    .feat_second{
+        display: inline-block;
+        border-radius: 5px;
+        background-color:lightsteelblue;
+        margin-top: 60px;
+        padding:10px 10px;
+        color: black;
+        font-size: 20px;
+        font-weight: bold;
+        align-content: center;
+        margin-left:50px;
+    }
+    .comment1, .comment2{
+        display: inline-block;
+        border-radius: 5px;
+        background-color:black;
+        margin-top: 60px;
+        padding:10px 10px;
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        align-content: center;
+        margin-left:35px;
+    }
+    .content1-container1 {
+         margin-left: 50px;
+            display:flex;
+            flex-direction: row; 
+            flex-wrap: wrap;
+            align-items: flex-start;
+            
+        }
+    .text {
+            flex: 1; /* Expand to fill available space */
+            
+            padding: 20px;
+            
+        }
+
+    .image2 {
+            flex: 1; /* Expand to fill available space */
+            padding:20px;
+            margin-right: 10px;
+            margin-left: 100px;
+            
+            
+}  
+        
+
+    .second_image {
+    width: 100%;
+    height:100%
+        }
+    @media (max-width: 768px) {
+            /* Change the order for smaller screens */
+            .content-container {
+                flex-direction: column;
+            }
+
+            .text, .image2 {
+                order: initial; 
+            }
+        } 
+        .information4{
+            display: inline-block;
+            font-size: 20px;
+            border-radius: 5px;
+        background-color:lightsteelblue;
+        margin-top: 60px;
+        padding:10px 10px;
+        color: black;
+        font-weight: bold;
+        align-content: center;
+        margin-left:35px;
+        }
+        .content2-container2 {
+            margin-left: 20px;
+            display: flex;
+            flex-direction: row; 
+            flex-wrap: wrap;
+            align-items: flex-start;
+        }
+
+        .text2 {
+            flex: 1;
+            order: 2; /* Set the order to display text on the right */
+            padding: 20px;
+            margin-left: 100px;
+            margin-top: 140px;
+        }
+        .image3{
+            flex:1;
+            order:1;
+            padding: 20px;
+            margin-top: 250px;
+        }
+        .third_img{
+            width: 100%;
+            height: 100%;
+        }
+        @media (max-width: 768px) {
+            /* Change the order for smaller screens */
+            .content2-container2 {
+                flex-direction: column;
+            }
+
+            .text2, .image3 {
+                order: initial; 
+            }
+        } 
+        .image-row {
+            margin:40px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: 20px; /* Adjust the margin between rows */
+    }
+
+    .image-container {
+      width: calc(33.33% - 10px); /* Adjust width and margin as needed */
+      margin-bottom: 20px; /* Adjust the margin between images */
+      
+    }
+
+    .image {
+      max-width: 100%;
+      width:400px;
+      height:250px
+    }
+
+    .image-name {
+    font-size: 20px;
+      font-weight: bold;
+      margin-top: 5px; /* Adjust the margin between image and name */
+      display: inline-block;
+      background-color: lightcyan;
+      color: peru;
+      padding: 10px;
+      border-radius: 15px;
+    }
+
+    .image-description {
+        font-size: 20px;
+      margin-top: 5px; /* Adjust the margin between name and description */
+    }
+    .next_row,.testimonal_head{
+        font-size: 20px;
+        margin-top: 100px;
+        font-weight: bold;
+        display: inline-block;
+      background-color: lightcyan;
+      color: peru;
+      padding: 10px;
+      border-radius: 15px;
+    }
+    .comment-container {
+      overflow: hidden;
+    }
+    .comment-text {
+      display: flex;
+      animation: marquee 25s linear infinite; 
+    }
+    @keyframes marquee {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+    .comment_test1{
+        flex:0 0 auto;
+        width:300px;
+      
+      background-color: white;
+      color: black;
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-right: 10px;
+    
+    }
+    .left_gold{
+        text-align: right;
+    }
+    .toggle {
+        font-size: 30px;
+  margin-top: 2rem;
+  color:white;
+  display: flex;
+  align-items: center;
+  margin-left: 500px;
+  margin-bottom: 20px;
+
+}
+.toggle-btn {
+  margin: 0 1rem;
+}
+.checkbox {
+  display: none;
+}
+
+.sub {
+  background: linear-gradient(
+    135deg,
+    rgba(163, 168, 240, 1) 0%,
+    rgba(105, 111, 221, 1) 100%
+  );
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  /* height: 25px;
+  width: 50px; */
+  height: 1.6rem;
+  width: 3.3rem;
+  border-radius: 1.6rem;
+  padding: 0.3rem;
+}
+.circle {
+  background-color: #fff;
+  height: 1.4rem;
+  width: 1.4rem;
+  border-radius: 50%;
+}
+.checkbox:checked + .sub {
+  justify-content: flex-end;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #fff;
+  color: hsl(233, 13%, 49%);
+  border-radius: 0.8rem;
+}
+.card.active:hover{
+  box-shadow: rgba(255, 188, 0, 0.8) 0px 0px 0px 3px;
+}
+
+.cards .card.active {
+  background: linear-gradient(
+    135deg,
+    rgba(163, 168, 240, 1) 0%,
+    rgba(105, 111, 221, 1) 100%
+  );
+  color: #fff;
+  display: flex;
+  align-items: center;
+  transform: scale(1.1);
+  z-index: 1;
+}
+ul {
+  margin: 2.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+ul li {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 1rem 0;
+}
+ul li.price {
+  font-size: 3rem;
+  color: hsl(232, 13%, 33%);
+  padding-bottom: 2rem;
+}
+.shadow {
+  box-shadow: -5px 5px 15px 1px rgba(0, 0, 0, 0.1);
+}
+.card.active .price {
+  color: #fff;
+}
+.btn {
+  margin-top: 1rem;
+  height: 2.6rem;
+  width: 13.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  background: linear-gradient(
+    135deg,
+    rgba(163, 168, 240, 1) 0%,
+    rgba(105, 111, 221, 1) 100%
+  );
+  color: #fff;
+  outline: none;
+  border: 0;
+  font-weight: bold;
+}
+.btn:hover{
+  cursor: pointer;
+  color: #9499eb;
+  background: white;
+  border: 1px solid #9499eb;
+}
+.active-btn {
+  background: #fff;
+  color: hsl(237, 63%, 64%);
+}
+.active-btn:hover{
+  background: #9499eb;
+  color: white;
+  border: 1px solid white;
+  cursor: pointer;
+}
+.bottom-bar {
+  border-bottom: 2px solid hsla(240, 8%, 85%, 0.582);
+}
+.card.active .bottom-bar {
+  border-bottom: 2px solid hsla(240, 8%, 85%, 0.253);
+}
+.pack {
+  font-size: 1.1rem;
+}
+
+@media (max-width: 280px) {
+  ul {
+    margin: 1rem;
+  }
+  h1 {
+    font-size: 1.2rem;
+  }
+  .toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+  }
+  .cards {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .card {
+    transform: scale(0.8);
+    margin-bottom: 1rem;
+  }
+  .cards .card.active {
+    transform: scale(0.8);
+  }
+}
+@media (min-width: 280px) and (max-width: 320px) {
+  ul {
+    margin: 20px;
+  }
+  .cards {
+    display: flex;
+    flex-direction: column;
+  }
+  .card {
+    margin-bottom: 1rem;
+  }
+  .cards .card.active {
+    transform: scale(1);
+  }
+}
+@media (min-width: 320px) and (max-width: 414px) {
+  .cards {
+    display: flex;
+    flex-direction: column;
+  }
+  .card {
+    margin-bottom: 1rem;
+  }
+  .cards .card.active {
+    transform: scale(1);
+  }
+}
+@media (min-width: 414px) and (max-width: 768px) {
+  .card {
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+  }
+  .cards .card.active {
+    transform: scale(1);
+  }
+}
+@media (min-width: 768px) and (max-width: 1046px) {
+  .cards {
+    display: flex;
+  }
+  .card {
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+  }
+  .cards .card.active {
+    transform: scale(1);
+  }
+}
+.layout { 
+	width: 600px; 
+	margin: auto; 
+	} 
+	.accordion { 
+	padding: 10px; 
+	margin-top: 10px; 
+	margin-bottom: 10px; 
+	background: lightblue; 
+	border-radius: 10px; 
+	} 
+	.accordion__question p { 
+	margin: 5px; 
+	padding: 0; 
+	font-family: Verdana; 
+	font-size: 20px; 
+	} 
+	.accordion__answer p { 
+	margin: 5px; 
+	padding: 10px; 
+	font-size: large; 
+	font-family: Verdana, Geneva, Tahoma, sans-serif; 
+	color: rgb(255, 255, 255); 
+	background: lightblue; 
+	border-radius: 10px; 
+	} 
+	.accordion:hover { 
+	cursor: pointer; 
+	} 
+	.accordion__answer { 
+	display: none; 
+	} 
+	.accordion.active .accordion__answer { 
+	display: block; 
+	}
+.blog2{
+    display: inline-block;
+    width:400px;
+    background-color: black;
+    color: white;
+    border-radius: 15px;
+    padding: 10px;
+}
+footer {
+  background-color: black;
+  color: white;
+  bottom: 0;
+  width: 100vw;
+  font-size: 16px;
+}
+footer * {
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+}
+.row {
+  padding: 1em 1em;
+}
+.row.primary {
+  display: grid;
+  grid-template-columns: 3fr 2fr 4fr;
+  align-items: stretch;
+}
+.column {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 2em;
+  min-height: 15em;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+}
+li:not(:first-child) {
+  margin-top: 0.8em;
+}
+ul li a {
+  color: paleturquoise;
+  text-decoration: none;
+}
+ul li a:hover {
+  color: #c7940a;
+}
+.about p {
+  text-align: justify;
+  line-height: 2;
+  margin: 0;
+}
+
+@media screen and (max-width: 850px) {
+  .row.primary {
+    grid-template-columns: 1fr;
+  }
+}
+.cont {
+    max-width: 500px;
+    margin:0 auto;
+    position:relative;
+}
+
+.fixed-wrapper {
+    position:absolute;
+    bottom:0;
+    right:0;
+    width:30px;
+    height:30px;
+}
+
+.fixed-wrapper .fixed {
+    font-size: 15px;
+    font-weight: bold;
+    position:fixed;
+    width:200px;
+    height:20px;
+    display: flex;
+    bottom:0;
+    background:white;
+    color: black;
+    border-radius: 15px;
+    padding: 5px;
+    margin-left: 180px;
+    margin-bottom: 20px;
+}
+    </style>
+</head>
+<body>
+    <div class="navbar">
+    <div class="about">
+        <a href="#logo">Milton</a>  
+    </div>
+    <div class="nav-links">
+    
+       <a href="#features">Features</a>
+       <a href="#testimonial">Testimonials</a>
+       <a href="#pricing">Pricing</a>
+       <a href="#faqs">FAQs</a>
+       <a href="#blogs">BLOGS</a>
+    
+    </div>
+    <div class="auth-links">
+        <a href="#login">Login</a>
+        <a href="#get-started">Get Started</a>
+    </div>
+    </div>
+</div>
+<div class="cont">
+      <div class="fixed-wrapper">
+          <div class="fixed">Buy this templete for $49</div>
+      </div>
+  </div>
+    <section id="logo" class="information">
+        <div class="useforspace" style="padding:70px;"></div>
+        <div class="information_box">
+        <div class="information_first"> An other way to manage time️ </div></div>
+        <div class="information_about">
+            <p>Your new favorite 
+            <br>calendar 🗓️ app</p>
+        </div>
+        <span style="font-size: 27px;">Here you should explain how cool your app is. Remember,<br> focus on the benefits for your users, not on the features.</span>
+        
+    
+    </section>
+
+    <section id="login" class="login_information">
+        <div>
+            <button id="getstarted" onclick="redirectToErrorPage()" style="background-color: black;color: white; margin-top: 20px;">Get Started, it's free</button>
+            <div>Free 14 days trials,no credit card needed</div>
+            <div class="star-rating"></div>
+            <div class="star-rating"></div>
+            <div class="star-rating"></div>
+        <div class="star-rating"></div>
+        <div class="star-rating"></div>
+        <span>5.0</span>
+        <div>From 200+ happy users</div>
+        </div>
+        <div class="image1">
+            <img class="first-img" src="https://savvycal.ongloat.com/content/images/2023/04/general-tours-meetings.jpeg" alt="Normal Image">
+        </div>
+    </section>
+    
+    <section id="features" class="feature-section">
+        <div class="feat_box">
+        <div class="feat_head">Our main features 🦸🏼</div>
+    <div style="font-size: 75px;font-weight: bolder;">Discover your new superpowers</div></div>
+    
+        <div class="feat_second">Seamless Scheduling</div>
+        <div class="content1-container1">
+            <div class="text">
+                <div style="font-size: 50px;font-weight: bold;">Focus on what matters most for you</div>
+            
+                    <p style="font-size: 25px;">Effortlessly plan your day with our intuitive drag-and-drop interface. Sync with multiple calendar platforms, import events from emails, and add participants with just a few clicks.</p>
+           
+                <div class="comment1">I tested many calendar apps. This app is the<br> best of all! It saves me hours of time.
+                        <p style="color: gray;">Carla, Head of Finance</p>
+                </div>
+            </div>
+
+            <div class="image2">
+                <img class="second-img" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRRTnoVUJoJLE7sPlzj--rREUg5ZRFb1XBwCpmsbFaoIzJGSv1R" alt="Normal Image" width="400" height="500">
+            </div>
+        
+        
+            
+            <div style="padding:100px;"></div>
+            <div class="content2-container2">
+                <div class="image3">
+                    <img class="thrid_img" src="https://framerusercontent.com/images/VFrv8s9Ou5YYTsx7jkOfyXmAm2Y.png?scale-down-to=512" alt="image normal" width="500" height="500">
+
+                </div>
+            
+                <div class="text2">
+                    <div class="information4_box">
+                         <div class="information4">Smart Reminders & Task</div>
+                    </div>
+                    <div style="font-size:50px;font-weight: bold;">
+
+                        Never miss an important deadline or event again</div>
+                    <p style="font-size: 25px;">Never miss an important deadline again with our AI-driven  notifications. Our app intelligently analyzes your schedule to prioritize what's most important, keeping you on track and ensuring your day is productive and stress-free.</p>
+                        <div class="comment2">I love how user-friendly this app is! It's so easy to add events and set reminders!
+
+                            <p>Adam, entrepreneur</p></div>
+                            
+                <div>
+        
+            </div>  
+            </div>
+
+    </section>
+    <div class="ex" style="text-align: center;">
+    <div class="next_row">And so much more... 💼</div>
+    <div class="ex1" style="font-size: 60px;font-weight: bold;">Our features to make your life <br>easier</div></div>
+    <div class="image-row">
+        <div class="image-container">
+          <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQnvrIZRpFN2HDJqoJU_Exl3KoL1PqJrE50_LciyC8qj79soirl" alt="Image 1" class="image">
+          <p class="image-name">Cross-Device Sync</p>
+          <p class="image-description">Keep your schedule in sync across all your devices, ensuring seamless access to your calendar, events, and tasks wherever you go.</p>
+        </div>
+    
+        <div class="image-container">
+          <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcT_MvcULv6ak8iKbrgTfHIF109ro6XCjG_Rtt19MjNJtvz8zWgF" alt="Image 2" class="image">
+          <p class="image-name">Auto Event Import</p>
+          <p class="image-description">Automatically import events from emails, social media, and other sources, so you never miss a beat or have to manually input details.</p>
+        </div>
+    
+        <div class="image-container">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThsLNJXCmlQLEAmr_mEHbaqHJ1XuDF3wA9LFP5iK3C0CCnuK9F" alt="Image 3" class="image">
+          <p class="image-name">Task Delegation</p>
+          <p class="image-description">Easily assign tasks to team members, family, or friends, promoting shared responsibility and seamless collaboration.</p>
+        </div>
+      </div>
+      <div class="image-row">
+        <div class="image-container">
+          <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcToJxHfNDU0Cyjq_nVL63bE2UdDov926stWf01K6w7XDR8YEYZk" alt="Image 1" class="image">
+          <p class="image-name">Customizable Alerts</p>
+          <p class="image-description">Personalize notification types and timings for events, tasks, and goals, ensuring you stay on track and informed without feeling overwhelmed.</p>
+        </div>
+    
+        <div class="image-container">
+          <img src="https://cdn.dribbble.com/userupload/5324595/file/original-fe4f7a86e2a4e76cea6d12eca0094361.png?resize=752x564" alt="Image 2" class="image">
+          <p class="image-name">Voice Command Integration</p>
+          <p class="image-description">Quickly create events, set reminders, or reschedule appointments with voice commands, thanks to compatibility with popular virtual assistants.</p>
+        </div>
+    
+        <div class="image-container">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThsLNJXCmlQLEAmr_mEHbaqHJ1XuDF3wA9LFP5iK3C0CCnuK9F" alt="Image 3" class="image">
+          <p class="image-name">Privacy Protection</p>
+          <p class="image-description">Safeguard your personal information and event details with our robust security measures, including end-to-end encryption and optional password protection.</p>
+        </div>
+      </div>
+      <section id="testimonial" class="testimonial-section">
+        <div class="ex2" style="text-align: center; padding: 20px;">
+        <div class ="testimonal_head">They already love our products 😍</div>
+        <div class="ex3" style="font-size: 70px;font-weight: bold;">See what our users say about us</div></div>
+      <div class="comment-container">
+    <div class="comment-text">
+        <div class="comment_test1">
+      <span><b>“Just love it”</b>
+
+        <div class="left_gold">⭐⭐⭐⭐⭐</div>
+        <div>This calendar app has been a lifesaver! I used to forget important events, but now I'm always on top of my schedule.</div>
+        Adam Moore</span></div>
+        <div class="comment_test1">
+      <span><b>"Highly recommend”</b></span>
+      <div class="left_gold">⭐⭐⭐⭐⭐</div>
+      <div> This app has saved me so much time and stress! I used to constantly forget important dates, but now I can stay on top of everything. You should test it!</div>
+    <div>Sophie Deviln</div>
+    </div>
+      <div class=" comment_test1">
+      <span><b>"Better than the rest”</b></span>
+      <div class="left_gold">⭐⭐⭐⭐⭐</div>
+      <div>Since I started using this app, I've saved so much time. I no longer have to manually add appointments or set reminders - it's all done for me!</div>
+    <div>Kyle Conord </div>
+    </div>
+    <div class="comment_test1">
+        <span><b>"Highly recommend”</b></span>
+        <div class="left_gold">⭐⭐⭐⭐⭐</div>
+        <div> This app has saved me so much time and stress! I used to constantly forget important dates, but now I can stay on top of everything. You should test it!</div>
+      <div>Deviln</div>
+      </div>
+      <div class=" comment_test1">
+        <span><b>"Better than the rest”</b></span>
+        <div class="left_gold">⭐⭐⭐⭐⭐</div>
+        <div>Since I started using this app, I've saved so much time. I no longer have to manually add appointments or set reminders - it's all done for me!</div>
+      <div>Kyle Conord </div>
+      </div>
+    </div>
+  </div>
+      </section>
+      <section id="pricing" class="pricing_information" style="text-align: center;">
+        <div class="price_head" style="margin-top: 100px;">Pricing and plans 💰</div>
+        <div class="price_head2" style="font-size: 50px;font-weight: bold;">Find the best plan for your needs</div>
+        <div class="toggle">
+            <label>Annually </label>
+            <div class="toggle-btn">
+              <input type="checkbox" class="checkbox" id="checkbox" />
+              <label class="sub" id="sub" for="checkbox">
+                <div class="circle"></div>
+              </label>
+            </div>
+            <label> Monthly</label>
+          </div>
+        </header>
+        <div class="cards">
+          <div class="card shadow">
+            <ul>
+              <li class="pack">Free</li>
+              <li id="free" class="price bottom-bar">&dollar;199.99</li>
+              <li class="bottom-bar">A cool feature</li>
+              <li class="bottom-bar">A basic feature</li>
+              <li class="bottom-bar">A top feature with limitations</li>
+              <li class="bottom-bar">An incredible feature so useful</li>
+              <li class="bottom-bar">A top feature</li>
+              <li><button class="btn"><i class="bi bi-bag"></i>&nbsp Get started</button></li>
+            </ul>
+          </div>
+          <div class="card active">
+            <ul>
+              <li class="pack">Starter</li>
+              <li id="starter" class="price bottom-bar">&dollar;249.99</li>
+              <li class="bottom-bar">A cool feature</li>
+              <li class="bottom-bar">A basic feature</li>
+              <li class="bottom-bar">A top feature with limitations</li>
+              <li class="bottom-bar">A top feature</li>
+              <li><button class="btn active-btn"><i class="bi bi-bag"></i>&nbsp Get started</button></li>
+            </ul>
+          </div>
+          <div class="card shadow">
+            <ul>
+              <li class="pack">Pro</li>
+              <li id="pro" class="price bottom-bar">&dollar;399.99</li>
+              <li class="bottom-bar">A cool feature</li>
+              <li class="bottom-bar">A basic feature</li>
+              <li class="bottom-bar">A top feature with limitations</li>
+              <li class="bottom-bar">A premium feature</li>
+              <li><button class="btn"><i class="bi bi-bag"></i>&nbsp Get started</button></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section id="faqs" class="faq_information" style="text-align: center;">
+        <div class="faq_head" style="margin-top: 100px;">Relevant stuff, bla bla 📣</div>
+        <div class="ex4" style="font-size: 80px;"><b>Frequently asked questions</b></div>
+     
+        <div class="layout"> 
+            <div class="accordion"> 
+                <div class="accordion__question"> 
+                  <p> can I Cancel my subscribtion?</p> 
+            
+                </div> 
+                <div class="accordion__answer"> 
+                  <p>Generally, when you log into your account, there's an option to cancel under the section for billing or subscription management.</p>
+                </div> 
+              </div> 
+            <div class="accordion"> 
+              <div class="accordion__question"> 
+                <p>What happens when my trial ends?</p> 
+          
+              </div> 
+              <div class="accordion__answer"> 
+                <p>Your free trial offer has a time limit. Once the deadline to cancel passes, you may be on the hook for more products or services and more payments. Monitor your credit and debit card statements.</p> 
+              </div> 
+            </div> 
+          
+            <div class="accordion"> 
+              <div class="accordion__question"> 
+                <p>What is your refund policy?</p> 
+              </div> 
+          
+              <div class="accordion__answer"> 
+                <p> 
+                    In addition, consumers who are informed about their rights to refunds and returns are more likely to make a purchase. The Return and Refund Policy is seen by many people as a guarantee that the product will be good or else they will be able to get their money back. 
+                </p> 
+            </div> 
+        </div> 
+      </div> 
+      </section>
+      <section id="blogs" class="blog_infor" style="text-align: center;">
+        <div class="blog1" style="margin-left: 100px;margin-top: 100px;">Last call Baby! 🚀</div>
+        <div class="ex5" style="font-size: 80px;font-weight: bold;">Ready to start?</div>
+        <div class="ex6" style="font-size: 25px;margin-top: 20px;">Here is your last chance to explain how cool your app is. Focus <br> on the benefits for your users, not on the features. </div>
+       <div class="ex8"> <button id="getstarted" onclick="redirectToErrorPage()" style="background-color: black;color: white; margin-top: 20px;">Get Started, it's free</button></div>
+       <div class="blog2" style="margin-top: 20px;margin-bottom: 30px;">I never missed a call again, the AI-drivenfeature is a game changer for me! 
+
+       <p> Adam, Solo founder</p> </div>
+    
+    </section>
+    <footer>
+    
+    <div class="row primary">
+        <div class="column about">
+          <h3>Milton</h3>
+          <p>
+            A short text explaining 
+
+            why my startup is so cool
+          </p>
+          <p>Copyright &copy; 2022</p>
+      
+        </div>
+      
+        <div class="column link">
+          
+          <ul>
+            <li><b>Products</b></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#testimonal">Testimonal</a></li>
+            <li><a href="#pricing" >Pricing</a></li>
+            <li><a href="#faqs">FAQS</a></li>
+          </ul>
+        </div>
+        <div class="column link">
+          
+            <ul>
+              <li><b>Resources</b></li>
+              <li><a href="#logo">change Log</a></li>
+              <li><a href="error.html">Help center</a></li>
+              <li><a href="#blogs" >Blogs</a></li>
+              <li>Contact</li>
+            </ul>
+        </div>
+          
+        
+       
+    </div>
+      </footer>
+    <script>
+        
+        function redirectToErrorPage() {
+            // Redirect to the error page
+            window.location.href = "error.html";
+        }
+        const checkbox = document.getElementById("checkbox");
+const starter = document.getElementById("starter");
+const pro = document.getElementById("pro");
+const free = document.getElementById("free");
+
+checkbox.addEventListener("click", () => {
+  free.textContent = free.textContent === "$199.99" ? "$19.99" : "$199.99";
+  starter.textContent =
+    starter.textContent === "$249.99" ? "$24.99 " : "$249.99";
+  pro.textContent = pro.textContent === "$399.99" ? "$39.99" : "$399.99";
+});
+let answers = document.querySelectorAll(".accordion"); 
+answers.forEach((event) => { 
+  event.addEventListener("click", () => { 
+    if (event.classList.contains("active")) { 
+      event.classList.remove("active"); 
+    } else { 
+      event.classList.add("active"); 
+    } 
+  }); 
+});
+
+    </script>
+</body>
+</html>
